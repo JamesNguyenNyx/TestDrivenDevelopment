@@ -27,8 +27,8 @@ fileprivate extension AppDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         if let window = window {
             let mainViewController = MainViewController()
-            let navi = UINavigationController.init(rootViewController: mainViewController)
-            window.rootViewController = navi
+            let navigation = BaseNavigationController.init(rootViewController: mainViewController)
+            window.rootViewController = navigation
             window.makeKeyAndVisible()
         }
     }

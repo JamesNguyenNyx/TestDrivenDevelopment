@@ -1,15 +1,16 @@
 //
-//  DailyGoalsTests.swift
-//  DailyGoalsTests
+//  GoalItemTests.swift
+//  DailyGoals
 //
 //  Created by JamesNguyen on 5/19/17.
 //  Copyright © 2017 JamesNguyen. All rights reserved.
 //
 
 import XCTest
+
 @testable import DailyGoals
 
-class DailyGoalsTests: XCTestCase {
+class GoalItemTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,9 +22,13 @@ class DailyGoalsTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testInitTakesTitle() {
+        let item = GoalItem(title: "")
+        XCTAssertNotNil(item, "item should not be nil")
+    }
+    
+    func testInitTakesTitleAndDescription() {
+        let item = GoalItem(title: "Foo", itemDescription: "Bar")
     }
     
     func testPerformanceExample() {

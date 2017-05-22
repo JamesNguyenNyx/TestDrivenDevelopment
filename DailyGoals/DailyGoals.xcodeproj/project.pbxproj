@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		8D223EB41ECEC95E002E3C30 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D223EB21ECEC95E002E3C30 /* MainViewController.swift */; };
 		8D223EB51ECEC95E002E3C30 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D223EB31ECEC95E002E3C30 /* MainViewController.xib */; };
-		8D6FEF601ECEAB940068C9A7 /* DailyGoalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6FEF5F1ECEAB940068C9A7 /* DailyGoalsTests.swift */; };
+		8D223EB71ECECD8D002E3C30 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D223EB61ECECD8D002E3C30 /* BaseNavigationController.swift */; };
+		8D223EB91ECECE61002E3C30 /* GoalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D223EB81ECECE61002E3C30 /* GoalItem.swift */; };
+		8D223EBD1ECED606002E3C30 /* GoalItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D223EBC1ECED606002E3C30 /* GoalItemTests.swift */; };
 		8D6FEF781ECEACBF0068C9A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D6FEF701ECEACBF0068C9A7 /* Assets.xcassets */; };
 		8D6FEF791ECEACBF0068C9A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D6FEF711ECEACBF0068C9A7 /* LaunchScreen.storyboard */; };
 		8D6FEF851ECEAE000068C9A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6FEF7C1ECEAE000068C9A7 /* AppDelegate.swift */; };
@@ -32,9 +34,11 @@
 		8415073BC0791FA4372778C8 /* Pods_DailyGoals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyGoals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D223EB21ECEC95E002E3C30 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8D223EB31ECEC95E002E3C30 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		8D223EB61ECECD8D002E3C30 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		8D223EB81ECECE61002E3C30 /* GoalItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalItem.swift; sourceTree = "<group>"; };
+		8D223EBC1ECED606002E3C30 /* GoalItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalItemTests.swift; sourceTree = "<group>"; };
 		8D6FEF471ECEAB930068C9A7 /* DailyGoals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyGoals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D6FEF5B1ECEAB940068C9A7 /* DailyGoalsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyGoalsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D6FEF5F1ECEAB940068C9A7 /* DailyGoalsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalsTests.swift; sourceTree = "<group>"; };
 		8D6FEF611ECEAB940068C9A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D6FEF6E1ECEACBF0068C9A7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D6FEF701ECEACBF0068C9A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -123,8 +127,8 @@
 		8D6FEF5E1ECEAB940068C9A7 /* DailyGoalsTests */ = {
 			isa = PBXGroup;
 			children = (
-				8D6FEF5F1ECEAB940068C9A7 /* DailyGoalsTests.swift */,
 				8D6FEF611ECEAB940068C9A7 /* Info.plist */,
+				8D223EBC1ECED606002E3C30 /* GoalItemTests.swift */,
 			);
 			path = DailyGoalsTests;
 			sourceTree = "<group>";
@@ -172,6 +176,7 @@
 		8D6FEF7D1ECEAE000068C9A7 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				8D223EB61ECECD8D002E3C30 /* BaseNavigationController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 		8D6FEF801ECEAE000068C9A7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8D223EB81ECECE61002E3C30 /* GoalItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -285,6 +291,7 @@
 					};
 					8D6FEF5A1ECEAB940068C9A7 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 8D6FEF461ECEAB930068C9A7;
 					};
@@ -429,6 +436,8 @@
 			files = (
 				8D6FEF851ECEAE000068C9A7 /* AppDelegate.swift in Sources */,
 				8D223EB41ECEC95E002E3C30 /* MainViewController.swift in Sources */,
+				8D223EB71ECECD8D002E3C30 /* BaseNavigationController.swift in Sources */,
+				8D223EB91ECECE61002E3C30 /* GoalItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,7 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D6FEF601ECEAB940068C9A7 /* DailyGoalsTests.swift in Sources */,
+				8D223EBD1ECED606002E3C30 /* GoalItemTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,10 +598,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DailyGoalsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamesnguyen.DailyGoalsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyGoals.app/DailyGoals";
 			};
@@ -604,6 +615,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DailyGoalsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamesnguyen.DailyGoalsTests;
